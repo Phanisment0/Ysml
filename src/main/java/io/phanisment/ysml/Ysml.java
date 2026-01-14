@@ -1,4 +1,4 @@
-package ysml;
+package io.phanisment.ysml;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 
-import ysml.exception.YsmlParseException;
-import ysml.exception.ParseErrorType;
-import ysml.parser.TextParser;
+import io.phanisment.ysml.exception.YsmlParseException;
+import io.phanisment.ysml.exception.ParseErrorType;
+import io.phanisment.ysml.parser.TextParser;
 
 public final class Ysml {
 	private Ysml() {

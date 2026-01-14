@@ -1,5 +1,4 @@
 import ysml.Ysml;
-
 import ysml.exception.YsmlParseException;
 
 public final class Main {

@@ -1,4 +1,4 @@
-package ysml.exception;
+package io.phanisment.ysml.exception;
 
 public final class YsmlParseException extends Exception {
 	private final ParseError error;

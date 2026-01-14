@@ -1,4 +1,4 @@
-package ysml.parser;
+package io.phanisment.ysml.parser;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-import ysml.exception.YsmlParseException;
-import ysml.exception.ParseErrorType;
+import io.phanisment.ysml.exception.YsmlParseException;
+import io.phanisment.ysml.exception.ParseErrorType;
 
 public class TextParser {
 	private final String[] lines;

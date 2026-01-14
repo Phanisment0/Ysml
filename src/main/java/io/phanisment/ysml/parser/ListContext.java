@@ -1,4 +1,4 @@
-package ysml.parser;
+package io.phanisment.ysml.parser;
 
 import java.util.List;
 import java.util.ArrayList;

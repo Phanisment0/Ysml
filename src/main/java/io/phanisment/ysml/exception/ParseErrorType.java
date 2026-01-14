@@ -1,4 +1,4 @@
-package ysml.exception;
+package io.phanisment.ysml.exception;
 
 public enum ParseErrorType {
 	INDENT_MIXED,
