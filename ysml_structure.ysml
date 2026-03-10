@@ -1,0 +1,48 @@
+# Comment
+# This is comment, same as in yml
+
+# Key
+# Key with string value, so you need to make your own parser to convert String to another type value.
+# result: { key = "value" }
+key:value
+
+# Key Another Example
+# This will return as string not number.
+# Result: { key0 = "1" }
+key0:1
+
+# Key Map
+# Key that has child or Map object.
+# Result: { key1 = { key = "value" } }
+key1:
+  key:value
+
+# Key Block
+# This will read all string in bracket as single String/Reader object
+# Result: { key_block = "  block value\n  new line" }
+key_block:{
+  block value
+  new line
+}
+
+# Key Block Another Example
+# This can be used as list, you just need to make your own parser structure like this.
+key_block0:{
+  - name{key=value;key1=value} greedy text
+  - name{key=[
+    - name
+  ]}
+}
+
+# Failed Concept Structure
+# In first i want to make like this but its too hard to make so i use structure like in the up that.
+# Result: { key_block = "block value\nnew line" }
+key_block:
+block value
+new line
+
+# See this, i fricking want this beacuse in yml you need to indent the close bracket
+key_block0:
+- name{key=[
+  - name
+]}

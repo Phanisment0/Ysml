@@ -1,26 +1,25 @@
 plugins {
+	id "me.champeau.jmh" version "0.7.2"
 	id "java-library"
-	id "application"
 	id "java"
 }
 
 group = project.group
 version = project.version
 
-application {
-	mainClass = project.main_class
-}
-
 base {
 	archivesName = project.archivesName
 }
 
 repositories {
-	mavenLocal()
 	mavenCentral()
 }
 
 dependencies {
+}
+
+test {
+	useJUnitPlatform()
 }
 
 tasks.withType(JavaCompile).configureEach {
