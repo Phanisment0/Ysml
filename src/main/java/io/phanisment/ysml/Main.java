@@ -1,24 +1,22 @@
 package io.phanisment.ysml;
 
-import io.phanisment.ysml.parser.TokenParser;
-import io.phanisment.ysml.tokenize.TokenStream;
+import java.text.ParseException;
 
-// Just example
+import io.phanisment.ysml.parser.Parser;
+
 public final class Main {
-	public static void main(String[] args) {
-		char[] t = """
-		# this is comment
-
-		key:value
-		key0:
+	public static void main(String[] args) throws ParseException {
+		var a = """
+		key:
 		  key:value
-		  key0:value
-		  key1:
-		    key:value
-		key1:value
+		key1:ok
+		key2:
+		  key:
+			 key:value
+		key3:value
 		""".toCharArray();
-		var stream = new TokenStream(t);
-		var parse = new TokenParser(stream);
-		System.err.println(parse.parse());
+
+		var parser = new Parser(a);
+		System.err.println(parser.parse());
 	}
 }
